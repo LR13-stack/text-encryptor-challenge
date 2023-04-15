@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor</title>
+    <link rel="icon" href="img/logo.svg" type="image/png" sizes="16x16" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Encriptador de texto</h2>
+    </header>
+    <main>
+        <div class="container">
+            <div class="inner-container-left">
+                <textarea name="text" id="text" placeholder="Escriba su texto aquí..." oninput="validate()"></textarea>
+                <div class="buttons">
+                    <button onclick="encrypt()">
+                        <img src="img/locked.svg" alt="encrypt">
+                        Encriptar
+                    </button>
+                    <button onclick="decrypt()">
+                        <img src="img/key.svg" alt="decrypt">
+                        Desencriptar
+                    </button>
+                </div>
+            </div>
+            <div class="inner-container-right">
+                <textarea name="result" id="result" onclick="this.select()" readonly>Aquí se mostrará el resultado...</textarea>
+                <button onclick="copyToClip()">
+                    <img src="img/copy.svg" alt="copy">
+                    Copiar
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Luis Marco Romero Pretel.</p>
+    </footer>
+</body>
+</html>
